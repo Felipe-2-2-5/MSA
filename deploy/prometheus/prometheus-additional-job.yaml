@@ -1,0 +1,6 @@
+\- job\_name: "backend"
+  scrape\_interval: "5s"
+  metrics\_path: "/api/metrics"
+  static\_configs:
+  \- targets: 
+    \- "backend.default.svc.cluster.local:3000" 

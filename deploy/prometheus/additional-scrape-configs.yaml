@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  prometheus-additional-job.yaml: XC0gam9iXF9uYW1lOiAiYmFja2VuZCIKICBzY3JhcGVcX2ludGVydmFsOiAiNXMiCiAgbWV0cmljc1xfcGF0aDogIi9hcGkvbWV0cmljcyIKICBzdGF0aWNcX2NvbmZpZ3M6CiAgXC0gdGFyZ2V0czogCiAgICBcLSAiYmFja2VuZC5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsOjMwMDAiIA==
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: additional-scrape-configs

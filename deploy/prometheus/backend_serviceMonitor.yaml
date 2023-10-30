@@ -1,0 +1,30 @@
+# apiVersion: monitoring.coreos.com/v1
+# kind: ServiceMonitor
+# metadata:
+#   name: backend
+#   labels:
+#     team: backend
+# spec:
+#   selector:
+#     matchLabels:
+#       app: backend
+#   endpoints:
+#   - interval: 30s
+#     port: http
+#     path: /api/metrics
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: backend
+  labels:
+    name: backend
+spec:
+  namespaceSelector:
+    matchNames:
+      - default
+  selector:
+    matchLabels:
+      app: backend
+  podMetricsEndpoints:
+  - targetPort: 3000
+    path: '/api/metrics'
